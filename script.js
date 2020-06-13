@@ -1,4 +1,5 @@
 var last_update = "2020-06-12";
+import "data/2020-06-12.js"
 
 var states = null;
 var colors = null;
@@ -30,10 +31,3 @@ function init(){
         state_select.appendChild(option);
     }
 }
-
-import('/data/' + last_update + '.js')
-  .then((module) => {
-        states = module.states;
-        colors = module.colors;
-        trends = module.trends;
-  });
