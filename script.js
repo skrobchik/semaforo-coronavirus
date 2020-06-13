@@ -31,7 +31,7 @@ function init(){
     }
 }
 
-import('/data' + last_update + '.js')
+import('/data/' + last_update + '.js')
   .then((module) => {
         states = module.states;
         colors = module.colors;
