@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+    background-color: #1d1d1d;
+}
+#state {
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    margin-left: 0px;
+    background-color: #343434;
+    color: white;
+    transform: translateY(50%);
+}
+#trend-container{
+    padding-left: 20px;
+    width: 80px;
+    height: 50px;
+}
+#trend-indicator{
+    width: 50px;
+    height: 50px;
+    
+}
+.indicator-increasing{
+    clip-path: polygon(0px 50px, 25px 0px, 50px 50px);
+    background-color: red;
+    box-shadow:
+        inset 0px 7px 15px 15px #00000031
+}
+.indicator-decreasing{
+    clip-path: polygon(0px 0px, 25px 50px, 50px 0px);
+    background-color: rgb(49, 216, 49);
+    box-shadow:
+        inset 0px -8px 15px 15px #00000021
+}
+.indicator-stable{
+    background: yellow;
+}
+.inline{
+    display: inline-flex;
+}
+#semaforo {
+    width: min-content;
+    left: 50%;
+    position: relative;
+    margin-left: -50px;
+}
+#red {
+    background-color: red;
+    
+}
+
+#orange {
+    background-color: orange;
+}
+#yellow {
+    background-color: yellow;
+}
+#green {
+    background-color: green;
+}
+.circle-holder{
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.on {
+    box-shadow:
+        inset 0px 0px 20px 20px #0000003f
+}
+.off {
+    box-shadow:
+        inset 0px 0px 50px 50px #0000008e
+}

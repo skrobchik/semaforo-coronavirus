@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Semaforo Coronavirus
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="inline">
+            <div>
+                <select id="state" onchange="update()">
+                    <option value="baja_california">Baja California</option>
+                    <option value="sinaloa">Sinaloa</option>
+                    <option value="guadalajara">Guadalajara</option>
+                </select>
+            </div>
+            <div id="trend-container">
+                <div id="trend-indicator" class="indicator-increasing"> </div>
+            </div>
+        </div>
+
+
+
+        <div id="semaforo">
+            <div class="circle-holder"> <div class="circle off" id="red"   > </div> </div>
+            <div class="circle-holder"> <div class="circle on" id="orange"> </div> </div>
+            <div class="circle-holder"> <div class="circle on" id="yellow"> </div> </div>
+            <div class="circle-holder"> <div class="circle off" id="green" > </div> </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
