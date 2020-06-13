@@ -25,16 +25,18 @@ body {
     clip-path: polygon(0px 50px, 25px 0px, 50px 50px);
     background-color: red;
     box-shadow:
-        inset 0px 7px 15px 15px #00000031
+        inset 0px 7px 15px 15px #00000031;
 }
 .indicator-decreasing{
     clip-path: polygon(0px 0px, 25px 50px, 50px 0px);
     background-color: rgb(49, 216, 49);
     box-shadow:
-        inset 0px -8px 15px 15px #00000021
+        inset 0px -8px 15px 15px #00000021;
 }
 .indicator-stable{
     background: yellow;
+    box-shadow: 
+        inset 0px 0px 10px 10px #00000021;
 }
 .inline{
     display: inline-flex;
@@ -76,4 +78,8 @@ body {
 .off {
     box-shadow:
         inset 0px 0px 50px 50px #0000008e
+}
+.footnote {
+    font-size: small;
+    color: rgb(77, 77, 77);
 }

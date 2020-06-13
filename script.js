@@ -1,10 +1,46 @@
 var last_update = "2020-06-12";
-import data from "./data/2020-06-12.js"
+//import data from "./data/2020-06-12.js"
+
+const DATA = {
+    "Baja California": ["red", "decreasing"],
+    "Baja California Sur": ["red", "increasing"],
+    "Sonora": ["red", "increasing"],
+    "Chihuahua": ["red", "increasing"],
+    "Coahuila": ["red", "increasing"],
+    "Nuevo Leon": ["red", "increasing"],
+    "Tamaulipas": ["red", "stable"],
+    "Sinaloa": ["red", "increasing"],
+    "Durango": ["red", "increasing"],
+    "Zacatecas": ["red", "increasing"],
+    "San Luis Potosi": ["red", "increasing"],
+    "Nayarit": ["red", "increasing"],
+    "Aguascalientes": ["red", "increasing"],
+    "Jalisco": ["red", "increasing"],
+    "Guanajuato": ["red", "increasing"],
+    "Queretaro": ["red", "decreasing"],
+    "Hidalgo": ["red", "decreasing"],
+    "Veracruz": ["red", "stable"],
+    "Colima": ["red", "increasing"],
+    "Michoacan": ["red", "increasing"],
+    "Estado de Mexico": ["red", "increasing"],
+    "CDMX": ["red", "decreasing"],
+    "Tlaxcala": ["red", "increasing"],
+    "Guerrero": ["red", "increasing"],
+    "Morelos": ["red", "stable"],
+    "Puebla": ["red", "increasing"],
+    "Oaxaca": ["red", "stable"],
+    "Chiapas": ["red", "increasing"],
+    "Tabasco": ["red", "stable"],
+    "Campeche": ["red", "increasing"],
+    "Quintana Roo": ["red", "stable"],
+    "Yucatan": ["red", "decreasing"],
+    "Zurich, Suiza": ["green", "decreasing"]
+};
 
 const COLOR_COLUMN = 0;
 const TREND_COLUMN = 1;
 
-var states = keys(data);
+var states = Object.keys(DATA);
 
 var circle_ids = ["red", "orange", "yellow", "green"];
 var circles = [];
@@ -42,8 +78,8 @@ function set_trend(trend) {
 
 function update(){
     state = state_select.value;
-    color = data[state][COLOR_COLUMN];
-    trend = data[state][TREND_COLUMN];
+    color = DATA[state][COLOR_COLUMN];
+    trend = DATA[state][TREND_COLUMN];
     set_color(color);
     set_trend(trend);
 }
@@ -55,4 +91,9 @@ function init(){
         option.value = states[i];
         state_select.appendChild(option);
     }
+    var last_update_p = document.getElementById("last-update");
+    last_update_p.innerHTML = "Ultima actualizacion: " + last_update;
 }
+
+init();
+update();
