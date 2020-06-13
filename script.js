@@ -1,6 +1,5 @@
 var last_update = "2020-06-12";
-var data_path = "./data/" + last_update + ".js";
-import data from data_path
+import data from "./data/2020-06-12.js"
 
 var states = data.keys();
 var red_circle = document.getElementById("red");
