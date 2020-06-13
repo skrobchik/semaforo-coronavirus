@@ -34,7 +34,6 @@ function set_color(color){
     var i = circle_ids.indexOf(color);
     var circle = circles[i];
     on(circle);
-    }
 }
 
 function set_trend(trend) {
