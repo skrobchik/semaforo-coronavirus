@@ -1,8 +1,6 @@
-var states = [
-];
+const data = {
+    "Baja California": ["orange", "decreasing"],
+    "Sinaloa": ["red", "increasing"],
+};
 
-var colors = [
-];
-
-var trends = [
-];
+export default data;

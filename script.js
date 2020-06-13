@@ -1,10 +1,8 @@
 var last_update = "2020-06-12";
-import "data/2020-06-12.js"
+var data_path = "./data/" + last_update + ".js";
+import data from data_path
 
-var states = null;
-var colors = null;
-var trends = null;
-
+var states = data.keys();
 var red_circle = document.getElementById("red");
 var orange_circle = document.getElementById("orange");
 var yellow_circle = document.getElementById("yellow");
